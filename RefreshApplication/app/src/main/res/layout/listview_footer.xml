@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listview_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp" >
+
+    <LinearLayout
+        android:id="@+id/listview_footer_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+       >
+
+        <ProgressBar
+            android:id="@+id/listview_footer_loading_pb"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/image_progress" />
+
+        <TextView
+            android:id="@+id/listview_footer_loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="努力加载中"
+            android:textColor="#000"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/listview_footer_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+        <ImageView
+            android:id="@+id/listview_footer_failed_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/warning"
+            />
+        <TextView
+            android:id="@+id/listview_footer_failed_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="加载失败，上拉试试"
+            android:textColor="#000"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/listview_footer_complete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+        <TextView
+            android:id="@+id/listview_footer_complete_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="已无更多数据"
+            android:textColor="#000"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>
